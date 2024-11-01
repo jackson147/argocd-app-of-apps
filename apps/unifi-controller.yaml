@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/jackson147/k8s-testing.git
     targetRevision: HEAD
-    path: helm/unifi-controller-umbrella
+    path: helm/unifi-umbrella
   destination:
     server: https://kubernetes.default.svc
     namespace: unifi

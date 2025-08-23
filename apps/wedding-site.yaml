@@ -1,23 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prometheus
+  name: wedding-site
   namespace: argocd
 spec:
   project: default
 
   source:
     repoURL: https://github.com/jackson147/k8s-testing.git
-    targetRevision: HEAD
-    path: helm/prometheus
+    targetRevision: home-server
+    path: helm/wedding-site
   destination:
     server: https://kubernetes.default.svc
-    namespace: prometheus
+    namespace: webapps
 
   syncPolicy:
     syncOptions:
     - CreateNameSpace=true
-    - ServerSideApply=true
 
     automated:
       selfHeal: true

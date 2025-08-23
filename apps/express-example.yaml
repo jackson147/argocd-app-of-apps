@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: observeability
+  name: express-example
   namespace: argocd
 spec:
   project: default
 
   source:
     repoURL: https://github.com/jackson147/k8s-testing.git
-    targetRevision: HEAD
-    path: helm/loki-umbrella
+    targetRevision: home-server
+    path: helm/express-example
   destination:
     server: https://kubernetes.default.svc
-    namespace: observe
+    namespace: webapps
 
   syncPolicy:
     syncOptions:

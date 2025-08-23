@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bin-day
+  name: biography
   namespace: argocd
 spec:
   project: default
 
   source:
     repoURL: https://github.com/jackson147/k8s-testing.git
-    targetRevision: HEAD
-    path: helm/bin-day
+    targetRevision: home-server
+    path: helm/biography
   destination:
     server: https://kubernetes.default.svc
     namespace: webapps

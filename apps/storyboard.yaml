@@ -1,15 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: biography
+  name: storyboard
   namespace: argocd
 spec:
   project: default
 
   source:
     repoURL: https://github.com/jackson147/k8s-testing.git
-    targetRevision: HEAD
-    path: helm/biography
+    targetRevision: home-server
+    path: helm/storyboard-rss
   destination:
     server: https://kubernetes.default.svc
     namespace: webapps

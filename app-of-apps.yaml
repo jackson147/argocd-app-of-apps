@@ -5,7 +5,7 @@ metadata:
 spec:
   source:
     repoURL: https://github.com/jackson147/argocd-app-of-apps.git
-    targetRevision: home-server
+    targetRevision: HEAD
     path: apps
   destination:
     name: in-cluster

@@ -8,7 +8,7 @@ spec:
 
   source:
     repoURL: https://github.com/jackson147/k8s-testing.git
-    targetRevision: home-server
+    targetRevision: HEAD
     path: helm/drivernos
   destination:
     server: https://kubernetes.default.svc
